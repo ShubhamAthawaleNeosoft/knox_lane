@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('CormorantInfant-Regular.woff2') format('woff2'),
+        url('CormorantInfant-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('CormorantInfant-Regular.woff2') format('woff2'),
+        url('CormorantInfant-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

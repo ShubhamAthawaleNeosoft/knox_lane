@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Haas-Grotesk';
+    src: url('NeueHaasDisplay-Light.woff2') format('woff2'),
+        url('NeueHaasDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Haas-Grotesk-Medium';
+    src: url('NeueHaasDisplay-Mediu.woff2') format('woff2'),
+        url('NeueHaasDisplay-Mediu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Haas-Grotesk-Bold';
+    src: url('NeueHaasDisplay-Bold.woff2') format('woff2'),
+        url('NeueHaasDisplay-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

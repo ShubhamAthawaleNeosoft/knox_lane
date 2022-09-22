@@ -1,0 +1,737 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'Cormorant Infant';
+    src: url('../fonts/ivyprestrodisplay/CormorantInfant-Regular.woff2') format('woff2'),
+        url('../fonts/ivyprestrodisplay/CormorantInfant-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Haas-Grotesk';
+    src: url('../fonts/hass/NeueHaasDisplay-Light.woff2') format('woff2'),
+        url('../fonts/hass/NeueHaasDisplay-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Haas-Grotesk-Medium';
+    src: url('../fonts/hass/NeueHaasDisplay-Mediu.woff2') format('woff2'),
+        url('../fonts/hass/NeueHaasDisplay-Mediu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Haas-Grotesk-Bold';
+    src: url('../fonts/hass/NeueHaasDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/hass/NeueHaasDisplay-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Haas-Grotesk ';
+}
+body::-webkit-scrollbar{
+    display: none !important;
+}
+header{
+    height: 100vh;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+footer a:hover,.contact-text:hover{
+   color: #EBEAB7 !important; 
+   transition: all 0.3s ease-out;
+}
+.slide a:hover{
+    opacity: 50%;
+    transition: all 0.3s ease-out;
+}
+/* ----------------------------Banner--------------------- */
+.banner{
+    background: url(../images/banner.jpg);
+    background-position: center right;
+    background-color: #171516;
+    background-size: cover;
+    overflow: hidden;
+}
+.navbar-brand{
+    font-size: 30px;
+}
+.banner-heading .dash{
+    border-top: 1px solid white;
+    width: 50px;
+    margin-bottom: -5px;
+    margin-left: -50px;
+}
+.banner a{
+  color: white;
+}
+.banner-heading h1{
+    font-family: 'Cormorant Infant';
+    font-size: 120px;
+    width: 70%;
+    letter-spacing: -0.03em;
+    line-height: 130px;
+}
+.banner-heading .patner-heading{
+    color: #EBEAB7;
+    margin-top: -30px !important;
+}
+.contact-text{
+    font-size: 14px;
+    margin-right: 60px;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.banner-heading .heading-dash{
+    font-family: 'Haas-Grotesk';
+    font-size: 80px;
+    
+}
+
+/* ----------------------------About----------------------- */
+.about{
+    margin-top: 7%;
+    color: #0e0d0d;   
+}
+h6{
+    font-size: 14px;
+    border-top: 1px solid lightgrey;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.about-info p{
+    font-size: 40px;
+    line-height: 50px;
+    font-family: 'Cormorant Infant';
+}
+.arrow-blk{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    height: 170px;
+    width: 170px;
+}
+.rotate-arrow{
+    border: 1px solid black;
+    position: absolute;
+    width: 307px;
+    transform: rotate(45deg);
+    margin-top: -50px;
+    margin-left: -49px;
+    transform-origin: top left;
+}
+.learn_more_link{
+    font-family: 'Haas-Grotesk-Bold';
+    margin-top: 15em;
+}
+.underline-animation{
+    position: relative;
+    padding-bottom: 5px;
+}
+.underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.30s ease-out;
+  }
+.underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.learn_more::before{
+    background: url(../images/icons_arrow_right-purple.svg) center center;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    margin-right: 20px;
+    left: 0;
+    margin-bottom: -4px;
+    width: 25px;
+    z-index: -1;
+}
+.learn_more:hover:before{
+    background: none;
+}
+.learn_more:hover::after{
+    background: url(../images/icons_arrow_right-purple.svg) center center;
+    background-size: contain;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    margin-left: 20px;
+    left: 0;
+    margin-bottom: -4px;
+    width: 25px;
+    z-index: -1;
+}
+.about h2{
+    font-size: 65px;
+    font-family: 'Cormorant Infant';
+    margin-top: 13%;   
+}
+/* ----------------------------Our Journey section---------------------- */
+@keyframes grow-left {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  .line-grow.active {
+      transform: scaleX(0);
+      animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 2s forwards;
+      transform: scaleX(1);
+      transform-origin: left;
+      animation-delay: 1s;
+      border-bottom: 1px solid black;
+      opacity: 1;
+  }
+.journey img{
+    height: 540px;
+    width: 540px;
+    position:sticky;
+    top:50px;
+}
+.journey .bold-text{
+    font-family: 'Haas-Grotesk-Bold';
+    font-size: 25px;
+}
+.numbers .sub-heading{
+    font-size: 25px;
+}
+.number-border{
+    border: 1px solid black;
+}
+.numbers span{
+    font-family: 'Haas-Grotesk';
+    font-style: normal;
+    font-size: 80px;
+}
+.numbers p{
+    font-family: 'Haas-Grotesk';
+}
+/* ----------------------------Partner Companies ----------------------- */
+.partner{
+    margin-top: 5%;
+    color: #0e0d0d;
+}
+/* ----------------------------Fingerpaint/anyHour/Partner----------------- */
+.fingerpaint{
+    margin-top: 8%;
+    padding-top: 8%;
+    border-top: 1px solid black;
+}
+.fingerpaint-heading h2{
+    font-size: 40px;
+    font-family: 'Cormorant Infant';
+}
+.fingerpaint-heading p{
+    font-family: 'Haas-Grotesk';
+    width: 53%;
+}
+.fingerpaint img{
+    display: block;
+    object-fit: cover;
+    height: 55vh;
+    width: 100%;
+}
+.imgBox {
+    overflow: hidden; 
+  }
+  .imgBox img {
+    display: block;
+    transition: .3s ease-in-out;
+  }
+  .imgBox:hover img {
+    transform: scale(1.2);
+  }   
+.fingerpaint_content{
+    margin-left: 20px;
+    margin-top: -200px;
+    position: absolute;
+}
+.finger-paint-blk img{
+    height: 40px;
+    width: 145px;
+}
+.finger-paint-blk{
+    padding: 15px;
+    height: 166px;
+    width: 166px;
+    overflow: hidden;
+}
+.finger-paint-blk a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.vertical-link{
+    font-family: 'Haas-Grotesk-bold';
+}
+.br-verical{
+    border-left: 1px solid black;
+    height: 100px;
+}
+.vertblk a{
+    font-family: 'Haas-Grotesk-bold';
+}
+.st-arrow{
+    transform-origin: bottom;
+    position: relative;
+     font-size: 30px;
+     transform: rotate(-45deg);
+     left: 9px;
+}
+.fingerpaint:hover .st-arrow.active{
+    animation: scrolly 1s linear  ; 
+}
+
+@keyframes scrolly {
+    0% {
+        left:9px; top:0px;  
+      }
+    50% {
+        left:80px; top:70px;  
+      }
+  51% {
+    left:-70px; top:-65px;  
+  }
+  100% {
+    left:9px; top:7px;
+  }
+}
+/* ----------------------------Marquee - FolatingText----------------- */
+.floating-text{
+    margin: 70px 0 190px 0;
+}
+.floating-text marquee{
+letter-spacing: -0.03em;
+line-height: 100px;
+}
+.floating-text marquee{
+    font-size: 80px;
+    font-family: 'Cormorant Infant';
+}
+.floating-text span::before{
+    content: '\2022';
+    padding: 0 20px;
+}
+/* ----------------------------Contact-US-------------------------- */
+.contact-us{
+    margin-top: -150px;
+    margin-left: 55%;
+    position: absolute;
+    
+}
+.contact-container{
+    background-color: #EBEAB7;
+    height: 180px;
+    width: 180px;
+    transform: scale(1);  
+    transition: transform 0.5s ease-in-out;
+}
+.contact-container:hover{
+    transform: scale(1.15);
+    transition: transform 0.5s ease-in-out;
+}
+.contact-content{
+    margin-top: -100%;
+    width: 180px;
+    height: 180px;
+}
+.contact-content p{
+    font-size: 25px;
+    position: relative;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.contact-content .contact-arrow{
+background: url(../images/icons_arrow_right-purple.svg) center center;
+display: inline-block;
+height: 20px;
+width: 25px;
+transform: rotate(45deg);      
+}
+/* ----------------------------News---------------------- */
+.news{
+    background-color: #171516;
+    color: white;
+}
+.news h6{
+    border-top: 1px solid rgb(63, 63, 63);
+}
+.news .headline{
+    width: 43%;
+}
+.news .headline p{
+    font-family: 'Cormorant Infant';
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    line-height: 50px;
+}
+.news .headline span{
+    font-size: 14px;
+    font-family: 'Haas-Grotesk';
+}
+.headline .news-img1{
+    margin-top: 4em;
+}
+.headline .news-img2{
+    margin-top: 1em;
+}
+.read-news:after{
+    background-color: white;
+}
+.light-br{
+    border-left: 1px solid white;
+}
+.news-img-content{
+    margin-right: 20px;
+    margin-top: -100px;
+}
+.news-img-blk{
+    transform-origin: 0 100%;
+    padding: 8px 15px;
+    height: 80px;
+    width: 80px;
+    transition: transform .5s linear;
+    transform: scaleY(0);
+    overflow: hidden;
+}
+.news-img-blk.active{   
+    transform: scaleY(1);
+}
+.news-img-blk span i{
+    font-size: 25px;
+}
+@keyframes scrolly1 {
+    0% {
+      left:-30px; top:-30px;  
+    }
+    100% {
+      left:0px; top:0px;
+    }
+  }
+.news-arrow{   
+    transform: rotate(-45deg);
+    position: relative;
+    opacity: 0;
+}
+.news-arrow.active{
+    animation: scrolly1 1s linear 0.4s ; 
+    opacity: 1;
+}
+/* ----------------------------Footer---------------------- */
+footer{
+    background-color: #171516;
+    color: white;
+}
+.footer-containt .footer-links,.footer-logo{
+    padding: 80px 0;
+}
+.footer-links a{
+    font-size: 60px;
+    font-family: 'Cormorant Infant';
+    letter-spacing: -0.01em;
+    line-height: 68px;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+.copyrights p,.copyrights a{
+    font-size: 14px;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.copyrights p{
+    color: rgba(255,255,255,.5);
+}
+/* -------------------Side Top Navbar--------------------- */
+.slide{
+	height: 100%;
+	width: 40%;
+	background: #fff;
+    position: fixed;
+	transition: .7s ease-in-out;
+    margin-right: -100%;
+    top: 0%;
+    right: 0%;
+    background-color:#EBEAB7 ;
+}
+.toggle{
+	position: absolute;
+	height: 30px;
+	width: 45px;
+	top: 30px;
+	right: 1.5%;
+	z-index: 1;
+}
+.toggle .common{
+	 position: absolute;
+    height: 2px;
+    width: 45px;
+    background: white;
+    border-radius: 50px;
+    transition: 0.7s ease;
+    
+}
+.toggle .top_line{
+	 top: 30%;
+	 left: 50%;
+	 transform: translate(-50%,-50%);
+}
+.toggle .bottom_line{
+	 top: 60%;
+	 left: 50%;
+	 transform: translate(-50%,-50%);
+}
+.slide.show{
+    position: fixed;
+    overflow-y: scroll;
+	box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    margin-right: 0;
+}
+.top_line.a{
+	transform: rotate(45deg);
+	left: 2px;
+	top: 14px;
+	width: 45px;
+    background: black;
+}
+.bottom_line.b{
+	transform: rotate(-45deg);
+	left: 2px;
+	top: 14px;
+	width: 45px;
+    background: black;
+}
+
+.fixed{
+    position: fixed;
+}
+.slide::-webkit-scrollbar{
+    display: none !important;
+}
+.sidenav-links a{
+    font-size: 60px;
+    font-family: 'Cormorant Infant';
+    letter-spacing: -0.01em;
+    line-height: 65px;
+    color: #0e0d0d;
+    text-decoration: none;
+}
+.sidenav-links{
+    padding: 16% 0;
+}
+.investor-login{
+    padding: 14%;
+}
+.investor-login span{
+    display: flex;
+    font-family: 'Haas-Grotesk-Bold';
+    border-bottom:1px solid black ;
+}
+.investor-login a{
+    text-decoration: none;
+    color: #0e0d0d;
+    font-family: 'Haas-Grotesk-Medium';
+}
+.blur-heading{
+    opacity: 7%;
+    transition: 1s all ease-in-out;
+}
+
+/* ----------------------Animation----------------------- */
+.text-animate{
+    animation: 1s ease-out 0s 1 slideInFromBottom2; 
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 0.5s all ease;
+  }  
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @keyframes slideInFromTop {
+    0% {
+        transform: translatey(-100px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translatey(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom2 {
+    from {
+        transform: translatey(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+.navbar-brand svg,
+.contact-text,
+.toggle {
+    animation: 0.8s ease-out 0s 1 slideInFromTop;
+}
+
+.banner-heading .growth-text {
+    animation: slideInFromBottom 2s;
+}
+
+.banner-heading .patner-heading {
+    animation: slideInFromBottom 2s;
+}
+
+/* ----------------------Responsive--------------------- */
+@media screen and (max-width: 1150px) {
+    .slide{
+        width: 50%;
+    }
+    .slide.show{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .journey img{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .journey .bold-text{
+        font-size: 20px;
+    }
+    .numbers .sub-heading{
+        font-size: 16px;
+    }
+    .numbers span{
+        font-size: 65px;
+    }
+    .headline .news-img1{
+        margin-top: 4.1em;
+    }
+    .headline .news-img2{
+        margin-top: 1em;
+    }
+    .footer-logo svg{
+        width: 458px !important;
+        height: 55px !important;
+    }
+    .footer-links{
+        padding-top: 0px !important;
+        padding-left: 20px !important;
+    }
+    .footer-links a{
+        font-size: 40px !important;
+        line-height: 50px;
+    }
+    .fingerpaint-heading p{
+        width: 100%;
+    }
+    .slide{
+        width: 100%;
+    }
+    .slide.show{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 840px) {
+    .banner-heading h1{
+        width: 100%;
+    }
+    .news .d-md-flex{
+         gap: 20px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .news .headline{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .learn_more_link{
+        margin-top: 10em;
+    }
+    .arrow-blk{
+        height: 100px;
+        width: 100px;
+    }
+    .rotate-arrow{
+        width: 157px;
+        margin-top: -13px;
+        margin-left: -11px;
+    }
+    .finger-paint-blk{
+        height: 110px;
+        width: 100%;
+    }
+    .fingerpaint_content{
+        margin-top: -180px;
+    }
+    .finger-paint-blk{
+        height: 146px;
+        width: 200px;
+    }
+
+}
+@media screen and (max-width: 590px) {
+    .banner-heading h1{
+        font-size: 75px;
+        line-height: 90px;
+    }
+    .about-info p{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .contact-text{
+        display: none;
+    }
+    .sidenav-links a{
+        font-size: 32px;
+        line-height: 45px;
+    }
+    .finger-paint-blk{
+        height: 126px;
+        width: 150px;
+    }
+}
